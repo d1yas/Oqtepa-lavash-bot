@@ -1,13 +1,14 @@
 from aiogram import types
 from aiogram.dispatcher.filters.builtin import CommandStart
 from keyboards.default.default_buttons import for_start
+from aiogram.dispatcher import FSMContext
 from loader import dp
 from keyboards.default.default_buttons import shaharlar, borib_buyurtma, borib_buyurtma_ortga, send_nomer
 from keyboards.inline.inline_buttons import menu, sozlamalar_buttons, soz_shahar_buttons
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 from db_file import *
-
-@dp.message_handler(commands="start")
+from states.oqtepa_states import OqtepaState
+@dp.message_handler(commands="start",state="*")
 async def bot_start(message: types.Message):
     await message.answer(f"""
 Assalomu alaykum {message.from_user.first_name}. Men Oqtepa Lavash yetkazib berish xizmati botiman!
@@ -25,18 +26,21 @@ Select Language
 @dp.message_handler(text="🇺🇿 O'zbekcha")
 async def uzbek(message: types.Message):
     await message.answer("📞 Iltimos, nomeringizni yuboring! ",reply_markup=send_nomer)
+    await OqtepaState.contackt_state.set()
     global til
     til = message.text
     print(til)
 
 
-@dp.message_handler(content_types=types.ContentType.CONTACT)
-async def contact_handler(message: types.Message):
+@dp.message_handler(content_types=types.ContentType.CONTACT,state=OqtepaState.contackt_state)
+async def contact_handler(message: types.Message, state: FSMContext):
     global telefon_nomer
     telefon_nomer = message.contact.phone_number
     await message.answer(f"Raqamingiz qabul qilindi: {telefon_nomer}",reply_markup=shaharlar)
     await message.answer("Shaharlar ro'yhatini ko'rish uchun tugmani bosing", reply_markup=shaharlar)
     print(telefon_nomer)
+    await state.finish()
+
 
 
 
