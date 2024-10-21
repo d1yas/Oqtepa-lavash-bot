@@ -16,6 +16,14 @@ for_start = ReplyKeyboardMarkup(
     resize_keyboard=True
 )
 
+send_nomer = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton("📞 Telefon raqamni yuborish", request_contact=True)
+        ]
+    ],
+    resize_keyboard=True
+)   
 
 shaharlar = ReplyKeyboardMarkup(
     keyboard=[
@@ -67,3 +75,6 @@ borib_buyurtma_ortga = ReplyKeyboardMarkup(
     ],
     resize_keyboard=True
 )
+
+
+
