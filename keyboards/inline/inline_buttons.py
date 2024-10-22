@@ -17,5 +17,52 @@ menu = InlineKeyboardMarkup(
             InlineKeyboardButton("✍️ Fikr Bildirish", callback_data="fikr"),
             InlineKeyboardButton("⚙️ Sozlamalar", callback_data="sozlamalar")
         ]
-    ]
+    ], resize_keyboard=True
+)
+
+
+sozlamalar_buttons = InlineKeyboardMarkup(
+    inline_keyboard=[
+        [
+            InlineKeyboardButton("Muloqat tili", callback_data="Muloqat_tili_call"),
+            InlineKeyboardButton("Telefon", callback_data="telefon_call"),
+            InlineKeyboardButton("Shaharlar", callback_data="shaharlar_call")
+        ],
+        [
+            InlineKeyboardButton("🔙 Asosiy menu", callback_data="asosiy_menu_call")
+        ]
+    ], resize_keyboard=True
+)
+
+
+soz_shahar_buttons = InlineKeyboardMarkup(
+   inline_keyboard=[
+        [
+            InlineKeyboardButton("Toshkent", callback_data="toshkent_call")
+        ],
+        [
+            InlineKeyboardButton("Nukus", callback_data="nukus_call")
+        ],
+        [
+            InlineKeyboardButton("Namangan", callback_data="namangan_call")
+        ],
+        [
+            InlineKeyboardButton("Qoqon", callback_data="qoqon_call")
+        ],
+        [
+            InlineKeyboardButton("Andijon", callback_data="abdijon_call"),
+        ],
+        [
+            InlineKeyboardButton("Fargona", callback_data="fargona_call")
+        ],
+        [
+           InlineKeyboardButton("Samarqand", callback_data="samarqand_call")
+        ],
+        [
+            InlineKeyboardButton("Gazalkent", callback_data="gazalkent_call")
+        ],
+        [
+            InlineKeyboardButton("Urganch", callback_data="urganch_call")
+        ]
+    ], resize_keyboard=True
 )
