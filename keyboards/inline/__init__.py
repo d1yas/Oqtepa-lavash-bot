@@ -1,4 +1,5 @@
 from . import barakalli_setlar_buttons
+from . import burger_va_hot_doglar
 from . import category_buttons
 from . import donars_buttons
 from . import hot_buttons
@@ -10,3 +11,7 @@ from . import news_buttons
 from . import salatlar_buttons
 from . import souslar_buttons
 from . import yozgi_ichimliklar
+from . import pitsa
+from . import shirinliklar
+from . import yahna_kofe
+from . import sendvich
