@@ -1,2 +1,12 @@
-
+from . import barakalli_setlar_buttons
+from . import category_buttons
+from . import donars_buttons
+from . import hot_buttons
+from . import ice_buttons
+from . import ichimliklar_buttons
 from . import inline_buttons
+from . import lavashlar
+from . import news_buttons
+from . import salatlar_buttons
+from . import souslar_buttons
+from . import yozgi_ichimliklar
