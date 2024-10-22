@@ -33,5 +33,5 @@ yangiliklar_buttons = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_call")
         ]
-    ]
+    ], resize_keyboard=True
 )

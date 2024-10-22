@@ -14,6 +14,24 @@ barskali_setlar_buttons = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("Shohona hot dog seti", callback_data="shohona_hot_dog_seti_call"),
             InlineKeyboardButton("Hod dog seti", callback_data="_call")
+        ],
+        [
+            InlineKeyboardButton("Tandir lavash juftligi", callback_data="tandir_lavash_juftligi_call"),
+            InlineKeyboardButton("Lavash juftligi", callback_data="lavash_juftligi_call")
+        ],
+        [
+            InlineKeyboardButton("Shaurma juftligi", callback_data="shaurma_juftligi_call"),
+            InlineKeyboardButton("juftlik seti", callback_data="juftlik_seti_call")
+        ],
+        [
+            InlineKeyboardButton("Lavashdan baraka", callback_data="lavashdan_baraka_call"),
+            InlineKeyboardButton("Chizda baraka", callback_data="chizda_baraka_call")
+        ],
+        [
+            InlineKeyboardButton("Shaurmadan baraka", callback_data="shaurmadan_baraka_call")
+        ],
+        [
+            InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_call")
         ]
-    ]
+    ], resize_keyboard=True
 )

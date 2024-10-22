@@ -33,5 +33,5 @@ category_buttons = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("🔙 Asosiy menu",callback_data="asosiy_menu_call")
         ]
-    ]
+    ], resize_keyboard=True
 )

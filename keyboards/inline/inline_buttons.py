@@ -17,7 +17,7 @@ menu = InlineKeyboardMarkup(
             InlineKeyboardButton("✍️ Fikr Bildirish", callback_data="fikr"),
             InlineKeyboardButton("⚙️ Sozlamalar", callback_data="sozlamalar")
         ]
-    ]
+    ], resize_keyboard=True
 )
 
 
@@ -31,7 +31,7 @@ sozlamalar_buttons = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("🔙 Asosiy menu", callback_data="asosiy_menu_call")
         ]
-    ]
+    ], resize_keyboard=True
 )
 
 
@@ -64,5 +64,5 @@ soz_shahar_buttons = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("Urgench", callback_data="urgench_call")
         ]
-    ]
+    ], resize_keyboard=True
 )
