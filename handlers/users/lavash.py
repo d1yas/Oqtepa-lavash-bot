@@ -9,23 +9,17 @@ from db_file import *
 from states.oqtepa_states import OqtepaState
 
 
-@dp.callback_query_handler(text="lavashlar_call",state=OqtepaState.lavash_state)
-async def lavashlar_func(callback: types.CallbackQuery, state: FSMContext):
-    # Send the image with a caption
+@dp.callback_query_handler(text="lavashlar_call")
+async def lavashlar_func(callback: types.CallbackQuery):
     await callback.message.answer_photo(
         open("images/lavashlar.jpg", "rb"), 
         caption="🌯 Lavashlar", 
         reply_markup=lavashlar_buttons
     )
-    await state.finish()
+    
 @dp.callback_query_handler(text="orqaga_call")
 async def orqaga_func(call: types.CallbackQuery):
     await call.message.answer("🍔 Buyurtma qilish", reply_markup=category_buttons)
-
-@dp.callback_query_handler(text="orqaga_lavash_call")
-async def orqaga_lavash_tur_func(call: types.CallbackQuery, state: FSMContext):
-    await OqtepaState.lavash_state.set()
-    await state.finish()
 
     
 
@@ -83,8 +77,3 @@ Narxi:   37 000 so'm
 Tavsif: Lavash xamiri, "Oqtepa" tomat sousi, donar go‘shti, pomidor, chips, mayonez, pishloq, sedana. Tandirda pishiriladi
 Miqdorini tanlang yoki kiriting
 """, reply_markup=savat)
-
-# @dp.callback_query_handler(text="orqaga_lavash_tur_call")
-# async def orqaga_lavash_tur_func(call: types.CallbackQuery):
-#     await OqtepaState.category_state.set()
-

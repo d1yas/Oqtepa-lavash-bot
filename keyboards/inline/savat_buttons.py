@@ -12,7 +12,7 @@ savat = InlineKeyboardMarkup(
             InlineKeyboardButton("🛒 Savatga qo'shish", callback_data="savatga_qoshish_call"),
         ],
         [
-            InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_lavash_tur_call")
+            InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_savat_call")
         ]
     ], resize_keyboard=True
 )

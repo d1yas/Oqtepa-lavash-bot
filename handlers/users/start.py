@@ -32,7 +32,6 @@ async def uzbek(message: types.Message):
     await OqtepaState.contact_state.set()
     global til
     til = message.text
-    print(til)
 
 
 @dp.message_handler(content_types=types.ContentType.CONTACT,state=OqtepaState.contact_state)
@@ -41,7 +40,7 @@ async def contact_handler(message: types.Message, state: FSMContext):
     telefon_nomer = message.contact.phone_number
     await message.answer(f"Raqamingiz qabul qilindi: {telefon_nomer}",reply_markup=shaharlar)
     await message.answer("Shaharlar ro'yhatini ko'rish uchun tugmani bosing", reply_markup=shaharlar)
-    print(telefon_nomer)
+
     await state.finish()
 
 
@@ -51,7 +50,6 @@ async def contact_handler(message: types.Message, state: FSMContext):
 async def tashkent(message: types.Message):
     global shahar
     shahar = message.text
-    print(shahar)
     await message.answer("Toshkent shahari tanlandi")
     await message.answer("Buyurtmani birga joylashtiramizmi? 🤗")
     await message.answer(f"""
@@ -95,7 +93,6 @@ Shahar: {shahar}
 Quyidagilardan birini tanlang
 """, reply_markup=sozlamalar_buttons)
 
-# new
 
 @dp.callback_query_handler(text="shaharlar_call")
 async def shaharlar_func(callback: types.CallbackQuery):

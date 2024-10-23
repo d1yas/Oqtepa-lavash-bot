@@ -19,19 +19,19 @@ yangiliklar_buttons = InlineKeyboardMarkup(
             InlineKeyboardButton("Kanadalik fri", callback_data="kanadalik_fri_call")
         ],
         [
-            InlineKeyboardButton("Pishloqli Yo...alar 3 dona", callback_data="Pishloqli 3 dona_call"),
-            InlineKeyboardButton("Pishloqli Yo...alar 5 dona", callback_data="Pishloqli 5 dona_call")
+            InlineKeyboardButton("Pishloqli Yostiqchalar 3 dona", callback_data="pishloqli_3_call"),
+            InlineKeyboardButton("Pishloqli Yostiqchalar 5 dona", callback_data="pishloqli_5_call")
         ],
         [
-            InlineKeyboardButton("Pishloqli Yo...alar t8 dona", callback_data="Pishloqli t8 dona_call"),
-            InlineKeyboardButton("Qirsillama h...alar 3 dona", callback_data="Qirsillama h3 dona_call")
+            InlineKeyboardButton("Pishloqli Yostiqchalar 8 dona", callback_data="pishloqli_8_call"),
+            InlineKeyboardButton("Qirsillama  halchalar 3 dona", callback_data="qirsillama_3_call")
         ],
         [
-            InlineKeyboardButton("Qirsillama h...alar 5 dona", callback_data="Qirsillama h5 dona_call"),
-            InlineKeyboardButton("Qirsillama h...alar 8 dona", callback_data="Qirsillama h8 dona_call")
+            InlineKeyboardButton("Qirsillama halchalar 5 dona", callback_data="qirsillama_5_call"),
+            InlineKeyboardButton("Qirsillama halchalar 8 dona", callback_data="qirsillama_8_call")
         ],
         [
-            InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_call")
+            InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_news__call")
         ]
     ], resize_keyboard=True
 )

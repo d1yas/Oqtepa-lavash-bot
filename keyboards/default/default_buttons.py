@@ -36,8 +36,8 @@ shaharlar = ReplyKeyboardMarkup(
             KeyboardButton("Qoqon")
         ],
         [
-            KeyboardButton("Adijon"),
-            KeyboardButton("Fagona")
+            KeyboardButton("Andijon"),
+            KeyboardButton("Farg'ona")
         ],
         [
            KeyboardButton("Samarqand"),
