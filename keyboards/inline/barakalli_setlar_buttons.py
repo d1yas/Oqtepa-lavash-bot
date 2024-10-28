@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-barskali_setlar_buttons = InlineKeyboardMarkup(
+barakali_setlar_buttons = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton("Tandie lavash seti", callback_data="tandie_lavash_seti_call"),

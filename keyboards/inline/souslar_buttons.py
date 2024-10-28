@@ -3,8 +3,8 @@ from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 souslar_buttons = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton("ketchup", callback_data="ketchup_call"),
-            InlineKeyboardButton("Chilib souse", callback_data="chilib_souse_call")
+            InlineKeyboardButton("Ketchup", callback_data="ketchup_call"),
+            InlineKeyboardButton("Chili souse", callback_data="chili_souse_call")
         ],
         [
             InlineKeyboardButton("Pishloqli souse", callback_data="pishloqli_souse_call"),

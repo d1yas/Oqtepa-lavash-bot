@@ -1,6 +1,6 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-donar_buttons = InlineKeyboardMarkup(
+donarlar = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton("Haggi", callback_data="haggi_call"),

@@ -77,6 +77,10 @@ async def buyurtma_berish(callback: types.CallbackQuery):
 async def eltib_berish(message: types.Message):
     await message.answer("Eltib berish uchun geo-joylashuvni jo'nating yoki manzilni tanlang", reply_markup=borib_buyurtma_ortga)
 
+@dp.message_handler(text="🚶‍♂️ Borib olish")
+async def olib_ketish(message: types.Message):
+    await message.answer("Olib ketish uchun geo-joylashuvni jo'nating yoki manzilni tanlang", reply_markup=borib_buyurtma_ortga)
+
 @dp.message_handler(text="🔙 Ortga")
 async def back(message: types.Message):
     await message.answer("Buyurtma turini tanlang", reply_markup=borib_buyurtma)

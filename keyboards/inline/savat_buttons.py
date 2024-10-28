@@ -1,11 +1,12 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
+from handlers.savat_uchun_func import count
 
-
+# Define the keyboard with the correct argument name
 savat = InlineKeyboardMarkup(
     inline_keyboard=[
         [
-            InlineKeyboardButton("➖", callback_data="minus_count_call"),
-            InlineKeyboardButton("1", callback_data="count_call"),
+            InlineKeyboardButton("➖", callback_data="minus_count_call") if count > 0 else InlineKeyboardButton(" ", callback_data="ignore"),
+            InlineKeyboardButton(str(count), callback_data="count_call"),
             InlineKeyboardButton("➕", callback_data="plus_count_call")
         ],
         [
@@ -14,5 +15,6 @@ savat = InlineKeyboardMarkup(
         [
             InlineKeyboardButton("🔙 Orqaga", callback_data="orqaga_savat_call")
         ]
-    ], resize_keyboard=True
+    ],
+    resize_keyboard=True
 )

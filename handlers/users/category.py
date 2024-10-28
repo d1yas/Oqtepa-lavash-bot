@@ -12,5 +12,6 @@ from states.oqtepa_states import OqtepaState
 
 @dp.message_handler(content_types=types.ContentType.LOCATION)
 async def location_handler(message: types.Message):
+    await message.delete()
     await message.answer("Manzil qabul qilindi")
     await message.answer("Kategoriyalardan birini tanlang. (https://telegra.ph/Taomnoma-09-30)", reply_markup=category_buttons)

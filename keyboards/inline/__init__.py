@@ -11,6 +11,7 @@ from . import news_buttons
 from . import pitsa
 from . import salatlar_buttons
 from . import savat_buttons
+from . import sneklar_buttons
 from . import sendvich
 from . import shirinliklar
 from . import souslar_buttons

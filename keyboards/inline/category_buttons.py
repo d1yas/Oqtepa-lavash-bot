@@ -16,7 +16,7 @@ category_buttons = InlineKeyboardMarkup(
             InlineKeyboardButton("🥪 Sandvichlar",callback_data="sandvichlar_call"),
         ],
         [
-            InlineKeyboardButton("🍟 Sneklar",callback_data="sneklar_call"),
+            InlineKeyboardButton("🍟 Sneklar",callback_data="sneklar_menu_call"),
             InlineKeyboardButton("🍕 Katta pitsalar",callback_data="pizza_call"),
         ],
         [

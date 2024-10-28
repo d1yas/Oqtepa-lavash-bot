@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-salatlar_buttons = InlineKeyboardMarkup(
+salatlar_list = InlineKeyboardMarkup(
     inline_keyboard=[
         [
             InlineKeyboardButton("Mujskoy kapriz", callback_data="mujskoy_kapriz_call"),
